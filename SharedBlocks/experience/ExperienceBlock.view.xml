@@ -1,0 +1,30 @@
+<mvc:View
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m">
+    <Table class="sapUxAPObjectPageSubSectionAlignContent" width="auto">
+        <columns>
+            <Column width="20%">
+            </Column>
+            <Column width="80%">
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <Text text="{i18n>jobDate04}"/>
+                <Text text="{i18n>jobTit04}"/>
+            </ColumnListItem>
+            <ColumnListItem>
+                <Text text="{i18n>jobDate03}"/>
+                <Text text="{i18n>jobTit03}"/>
+            </ColumnListItem>
+            <ColumnListItem>
+                <Text text="{i18n>jobDate02}"/>
+                <Text text="{i18n>jobTit02}"/>
+            </ColumnListItem>
+            <ColumnListItem>
+                <Text text="{i18n>jobDate01}"/>
+                <Text text="{i18n>jobTit01}"/>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>

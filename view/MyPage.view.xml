@@ -1,0 +1,115 @@
+<mvc:View
+        controllerName="ui5.mszyba.controller.MyPage"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.uxap"
+        xmlns:m="sap.m"
+        xmlns:core="sap.ui.core"
+        xmlns:experience="ui5.mszyba.SharedBlocks.experience"
+        xmlns:certification="ui5.mszyba.SharedBlocks.certification"
+        xmlns:summary="ui5.mszyba.SharedBlocks.summary">
+    <ObjectPageLayout
+            id="ObjectPageLayout"
+            showTitleInHeaderContent="true"
+            upperCaseAnchorBar="false">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle>
+                <expandedHeading>
+                    <m:Title text="{i18n>firstName} {i18n>lastName}" wrapping="true"/>
+                </expandedHeading>
+
+                <snappedHeading>
+                    <m:HBox>
+                        <m:VBox>
+                            <m:Avatar icon="sap-icon://avatar" class="sapUiSmallMarginEnd"/>
+                        </m:VBox>
+
+                        <m:VBox>
+                            <m:Title text="{i18n>firstName} {i18n>lastName}" wrapping="true"/>
+                            <m:Label text="{i18n>jobPosition}"/>
+                        </m:VBox>
+                    </m:HBox>
+                </snappedHeading>
+
+                <expandedContent>
+                    <m:Label text="{i18n>jobPosition}"/>
+                </expandedContent>
+
+                <snappedTitleOnMobile>
+                    <m:Title text="{i18n>firstName} {i18n>lastName}"/>
+                </snappedTitleOnMobile>
+
+                <actions>
+                    <m:Button type="Emphasized" text="{i18n>linkGithubDesc}" press="handleUrlPress" />
+                </actions>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+        <headerContent>
+            <m:FlexBox wrap="Wrap" fitContainer="true">
+                <m:Avatar icon="sap-icon://avatar" class="sapUiMediumMarginEnd" displaySize="L"/>
+
+                <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+                    <m:Title text="Contact Information" class="sapUiTinyMarginBottom"/>
+
+                    <m:HBox class="sapUiTinyMarginBottom">
+                        <core:Icon src="sap-icon://account"/>
+                        <m:Text text=" {i18n>firstName} {i18n>lastName}" class="sapUiSmallMarginBegin"/>
+                    </m:HBox>
+
+                    <m:HBox class="sapUiTinyMarginBottom">
+                        <core:Icon src="sap-icon://internet-browser"/>
+                        <m:Link text="{i18n>wwwName}" href="{i18n>wwwAddress}" class="sapUiSmallMarginBegin"/>
+                    </m:HBox>
+
+                    <m:HBox class="sapUiTinyMarginBottom">
+                        <core:Icon src="sap-icon://internet-browser"/>
+                        <m:Link text="{i18n>wwwLinkedInName}" href="{i18n>wwwLinkedIn}" class="sapUiSmallMarginBegin"/>
+                    </m:HBox>
+
+                    <m:HBox class="sapUiTinyMarginBottom">
+                        <core:Icon src="sap-icon://email"/>
+                        <m:Link text="{i18n>email}" href="{i18n>email}" class="sapUiSmallMarginBegin"/>
+                    </m:HBox>
+
+                    <m:HBox class="sapUiTinyMarginBottom">
+                        <core:Icon src="sap-icon://addresses"/>
+                        <m:Text text="{i18n>city}" class="sapUiSmallMarginBegin"/>
+                    </m:HBox>
+                </m:VBox>
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection title="{i18n>titleSummary}" titleUppercase="false">
+                <subSections>
+                    <ObjectPageSubSection title="{i18n>titleSummary}" titleUppercase="false">
+                        <blocks>
+                            <summary:SummaryBlock id="summary"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection title="{i18n>titleCertification}" titleUppercase="false">
+                <subSections>
+                    <ObjectPageSubSection title="{i18n>titleCertification}" titleUppercase="false" showTitle="true">
+                        <blocks>
+                            <certification:CertificationBlock id="certification"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection title="{i18n>titleJobExperience}" titleUppercase="false">
+                <subSections>
+                    <ObjectPageSubSection title="{i18n>titleJobExperience}" titleUppercase="false">
+                        <blocks>
+                            <experience:ExperienceBlock id="experience"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+
+    </ObjectPageLayout>
+</mvc:View>

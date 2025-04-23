@@ -1,0 +1,103 @@
+{
+    "_version": "1.65.0",
+    "sap.app": {
+        "id": "ui5.mszyba",
+        "i18n": {
+            "bundleUrl": "i18n/i18n.properties",
+            "supportedLocales": [
+                ""
+            ],
+            "fallbackLocale": ""
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+        "routing": {
+            "config": {
+              "routerClass": "sap.m.routing.Router",
+              "type": "View",
+              "viewType": "XML",
+              "path": "ui5.mszyba.view",
+              "controlId": "app",
+              "controlAggregation": "pages"
+            },
+            "routes": [
+              {
+                "pattern": "",
+                "name": "overview",
+                "target": "overview"
+              },
+              {
+                "pattern": "detail/{invoicePath}",
+                "name": "detail",
+                "target": "detail"
+              }
+            ],
+            "targets": {
+              "overview": {
+                "id": "overview",
+                "name": "Overview"
+              },
+              "detail": {
+                "id": "detail",
+                "name": "Detail"
+              }
+            }
+          },
+
+        "dependencies": {
+            "minUI5Version": "1.108.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ui.layout": {},
+                "sap.uxap": {}
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ui5.mszyba.i18n.i18n",
+                    "supportedLocales": [
+                        ""
+                    ],
+                    "fallbackLocale": ""
+                }
+            },
+            "invoice": {
+                "type": "sap.ui.model.json.JSONModel",
+				"uri": "Invoices.json"
+            }
+        },
+        "rootView": {
+            "viewName": "ui5.mszyba.view.App",
+            "type": "XML",
+            "id": "app"
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        }
+    }
+}

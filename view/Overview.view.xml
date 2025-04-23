@@ -1,0 +1,5 @@
+<mvc:View controllerName="ui5.mszyba.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+    <mvc:XMLView viewName="ui5.mszyba.view.MyPage" />
+</mvc:View>

@@ -1,0 +1,39 @@
+<mvc:View
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns="sap.m">
+    <Table class="sapUxAPObjectPageSubSectionAlignContent" width="auto">
+        <columns>
+            <Column width="10%">
+                <Text text="{i18n>tableColDate}"/>
+            </Column>
+            <Column width="10%">
+                <Text text="{i18n>tableColUpdate}"/>
+            </Column>
+            <Column width="80%">
+                <Text text="{i18n>tableColTitle}"/>
+            </Column>
+        </columns>
+        <items>
+            <ColumnListItem>
+                <Text text="{i18n>certDate04}"/>
+                <Text text="{i18n>certUpDate04}"/>
+                <Link text="{i18n>certDesc04}" href="{i18n>certLink04}" target="_blank"/>
+            </ColumnListItem>
+            <ColumnListItem>
+                <Text text="{i18n>certDate03}"/>
+                <Text text="{i18n>certUpDate03}"/>
+                <Link text="{i18n>certDesc03}" href="{i18n>certLink03}" target="_blank"/>
+            </ColumnListItem>
+            <ColumnListItem>
+                <Text text="{i18n>certDate02}"/>
+                <Text text="{i18n>certUpDate02}"/>
+                <Link text="{i18n>certDesc02}" href="{i18n>certLink02}" target="_blank"/>
+            </ColumnListItem>
+            <ColumnListItem>
+                <Text text="{i18n>certDate01}"/>
+                <Text text="{i18n>certUpDate01}"/>
+                <Link text="{i18n>certDesc01}" href="{i18n>certLink01}" target="_blank"/>
+            </ColumnListItem>
+        </items>
+    </Table>
+</mvc:View>
