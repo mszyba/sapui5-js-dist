@@ -1,0 +1,32 @@
+{
+ "Certifications": [
+     {
+         "CertName": "SAP Certified Associate - Back-End Developer ABAP Cloud",
+         "Date": "Mar, 2024",
+         "Update": "Mar, 2025",
+         "Link": "https://www.credly.com/badges/242913f5-2488-49e1-b85e-9e335ccbc5b5",
+         "LinkName": "C_ABAPD_2309"
+     },
+     {
+         "CertName": "SAP Certified Development Specialist - ABAP for SAP HANA 2.0",
+         "Date": "Mar, 2024",
+         "Update": "",
+         "Link": "https://www.credly.com/badges/90ec2974-729d-4981-aa59-4ff2ef5ac667",
+         "LinkName": "E_HANAAW_18"
+     },
+     {
+         "CertName": "SAP Certified Associate - Back-End Developer ABAP Cloud",
+         "Date": "May, 2023",
+         "Update": "",
+         "Link": "https://www.credly.com/badges/687e4200-e7cd-4fa1-8f6a-adfdf39e2fb4/public_url",
+         "LinkName": "C_TAW12_750"
+     },
+     {
+         "CertName": "ISTQB® Certified Tester Foundation Level",
+         "Date": "Nov, 2021",
+         "Update": "",
+         "Link": "http://scr.istqb.org/?name=Szyba&number=19075%2FCTFL%2F2022&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=",
+         "LinkName": "ISTQB®"
+     }
+ ]
+}

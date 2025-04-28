@@ -1,39 +1,93 @@
 <mvc:View
         xmlns:mvc="sap.ui.core.mvc"
-        xmlns="sap.m">
-    <Table class="sapUxAPObjectPageSubSectionAlignContent" width="auto">
-        <columns>
-            <Column width="10%">
-                <Text text="{i18n>tableColDate}"/>
-            </Column>
-            <Column width="10%">
-                <Text text="{i18n>tableColUpdate}"/>
-            </Column>
-            <Column width="80%">
-                <Text text="{i18n>tableColTitle}"/>
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem>
-                <Text text="{i18n>certDate04}"/>
-                <Text text="{i18n>certUpDate04}"/>
-                <Link text="{i18n>certDesc04}" href="{i18n>certLink04}" target="_blank"/>
-            </ColumnListItem>
-            <ColumnListItem>
-                <Text text="{i18n>certDate03}"/>
-                <Text text="{i18n>certUpDate03}"/>
-                <Link text="{i18n>certDesc03}" href="{i18n>certLink03}" target="_blank"/>
-            </ColumnListItem>
-            <ColumnListItem>
-                <Text text="{i18n>certDate02}"/>
-                <Text text="{i18n>certUpDate02}"/>
-                <Link text="{i18n>certDesc02}" href="{i18n>certLink02}" target="_blank"/>
-            </ColumnListItem>
-            <ColumnListItem>
-                <Text text="{i18n>certDate01}"/>
-                <Text text="{i18n>certUpDate01}"/>
-                <Link text="{i18n>certDesc01}" href="{i18n>certLink01}" target="_blank"/>
-            </ColumnListItem>
-        </items>
-    </Table>
+        xmlns="sap.m"
+        xmlns:f="sap.ui.layout.form"
+>
+    <VBox class="sapUiSmallMargin">
+        <f:Form id="FormDisplayCertifications"
+                editable="false">
+            <f:layout>
+                <f:ResponsiveGridLayout
+                        labelSpanXL="4"
+                        labelSpanL="3"
+                        labelSpanM="4"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        emptySpanL="4"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="2"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer title="{i18n>certDesc04}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDate}">
+                            <f:fields>
+                                <Text text="{i18n>certDate04}"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="{i18n>tableColUpdate}">
+                            <f:fields>
+                                <Text text="{i18n>certUpDate04}"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="{i18n>tableColLink}">
+                            <f:fields>
+                                <Link text="{i18n>certLinkDesc04}" href="{i18n>certLink04}" target="_blank"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+
+                <f:FormContainer title="{i18n>certDesc03}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDate}">
+                            <f:fields>
+                                <Text text="{i18n>certDate03}"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="{i18n>tableColLink}">
+                            <f:fields>
+                                <Link text="{i18n>certLinkDesc03}" href="{i18n>certLink03}" target="_blank"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+
+                <f:FormContainer title="{i18n>certDesc02}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDate}">
+                            <f:fields>
+                                <Text text="{i18n>certDate02}"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="{i18n>tableColLink}">
+                            <f:fields>
+                                <Link text="{i18n>certLinkDesc02}" href="{i18n>certLink02}" target="_blank"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+
+                <f:FormContainer title="{i18n>certDesc01}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDate}">
+                            <f:fields>
+                                <Text text="{i18n>certDate01}"/>
+                            </f:fields>
+                        </f:FormElement>
+                        <f:FormElement label="{i18n>tableColLink}">
+                            <f:fields>
+                                <Link text="{i18n>certLinkDesc01}" href="{i18n>certLink01}" target="_blank"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+    </VBox>
 </mvc:View>

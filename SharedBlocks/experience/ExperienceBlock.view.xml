@@ -1,30 +1,68 @@
 <mvc:View
         xmlns:mvc="sap.ui.core.mvc"
-        xmlns="sap.m">
-    <Table class="sapUxAPObjectPageSubSectionAlignContent" width="auto">
-        <columns>
-            <Column width="20%">
-            </Column>
-            <Column width="80%">
-            </Column>
-        </columns>
-        <items>
-            <ColumnListItem>
-                <Text text="{i18n>jobDate04}"/>
-                <Text text="{i18n>jobTit04}"/>
-            </ColumnListItem>
-            <ColumnListItem>
-                <Text text="{i18n>jobDate03}"/>
-                <Text text="{i18n>jobTit03}"/>
-            </ColumnListItem>
-            <ColumnListItem>
-                <Text text="{i18n>jobDate02}"/>
-                <Text text="{i18n>jobTit02}"/>
-            </ColumnListItem>
-            <ColumnListItem>
-                <Text text="{i18n>jobDate01}"/>
-                <Text text="{i18n>jobTit01}"/>
-            </ColumnListItem>
-        </items>
-    </Table>
+        xmlns="sap.m"
+        xmlns:f="sap.ui.layout.form"
+>
+    <VBox class="sapUiSmallMargin">
+        <f:Form id="FormDisplayJob"
+                editable="false">
+            <f:layout>
+                <f:ResponsiveGridLayout
+                        labelSpanXL="4"
+                        labelSpanL="3"
+                        labelSpanM="4"
+                        labelSpanS="4"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        emptySpanL="0"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" />
+            </f:layout>
+            <f:formContainers>
+                <f:FormContainer title="{i18n>jobTit04}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDates}">
+                            <f:fields>
+                                <Text text="{i18n>jobDate04}"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+
+                <f:FormContainer title="{i18n>jobTit03}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDates}">
+                            <f:fields>
+                                <Text text="{i18n>jobDate03}"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+
+                <f:FormContainer title="{i18n>jobTit02}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDates}">
+                            <f:fields>
+                                <Text text="{i18n>jobDate02}"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+
+                <f:FormContainer title="{i18n>jobTit01}">
+                    <f:formElements>
+                        <f:FormElement label="{i18n>tableColDates}">
+                            <f:fields>
+                                <Text text="{i18n>jobDate01}"/>
+                            </f:fields>
+                        </f:FormElement>
+                    </f:formElements>
+                </f:FormContainer>
+            </f:formContainers>
+        </f:Form>
+    </VBox>
 </mvc:View>

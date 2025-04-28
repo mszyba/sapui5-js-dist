@@ -3,11 +3,15 @@ sap.ui.define([
   "sap/m/MessageToast",
   "sap/ui/core/Fragment",
   "sap/ui/model/json/JSONModel"
-], function (Controller) {
+], (Controller, JSONModel) => {
   "use strict";
 
   return Controller.extend("ui5.mszyba.controller.MyPage", {
-    onInit: function () {
+    onInit() {
+      let oViewModel = new sap.ui.model.json.JSONModel();
+      oViewModel.loadData("../model/Certifications.json");
+      this.getView().setModel(oViewModel, "certifications");
+
     },
 
     onSectionVisibilityChanged: function (oEvent) {
